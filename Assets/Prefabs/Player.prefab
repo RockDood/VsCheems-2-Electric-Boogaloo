@@ -336,7 +336,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 12
-  gravity: -9.81
+  gravity: -39.24
   jumpHei: 3
   mSens: 100
   pBody: {fileID: 4249421116368538}
