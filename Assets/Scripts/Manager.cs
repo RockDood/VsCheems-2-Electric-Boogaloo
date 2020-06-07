@@ -6,9 +6,32 @@ using UnityEngine.UI;
 
 public class Manager : NetworkLobbyManager
 {
+    private string[] TeamCats;
+    private string[] TeamRats;
+    private string[] PlayerList;
 
-public void StartupHost()
+    void Update()
     {
+
+    }
+
+    //void OnLobbyServerConnect()
+    //{
+    //    GetPlayerList();
+    //}
+
+    //void GetPlayerList()
+    //{
+    //    if (NetworkServer.active)
+    //    {
+    //        PlayerList = NetworkServer.connections.ToString();
+    //    }
+    //}
+
+    public void StartupHost()
+    {
+        if (NetworkServer.active)
+            return;
         SetPort();
         NetworkLobbyManager.singleton.StartHost();
     }
@@ -42,6 +65,7 @@ public void StartupHost()
             SetupOtherSceneButtons();
         }
     }
+
     void SetupMenuSceneButtons()
     {
         //GameObject.Find("ButtonStartHost").GetComponent<Button>().onClick.RemoveAllListeners();
